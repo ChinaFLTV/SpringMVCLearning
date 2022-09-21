@@ -7,6 +7,7 @@
           <option value="org.springframework:spring-webmvc" />
           <option value="ch.qos.logback:logback-classic" />
           <option value="org.thymeleaf:thymeleaf" />
+          <option value="org.thymeleaf:thymeleaf-spring5" />
         </list>
       </option>
     </inspection_tool>

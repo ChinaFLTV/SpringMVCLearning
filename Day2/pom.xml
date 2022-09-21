@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <packaging>war</packaging>
-    <artifactId>Day1</artifactId>
+    <artifactId>Day2</artifactId>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
