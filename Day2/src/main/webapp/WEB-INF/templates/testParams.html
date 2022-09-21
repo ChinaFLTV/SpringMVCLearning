@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>测试请求参数</title>
+    </head>
+    <body>
+
+        <h1>This is a page for testing request parameters</h1>
+        <a th:href="@{/aihei(username='Dage',password=123456)}">获取请求参数</a>
+        <a th:href="@{/abcdef(username='Dage',password=123456)}">Spring获取请求参数</a>
+
+        <form th:action="@{abcdefgh}" method="POST">
+            <label>用户名</label><input type="text" name="username"/><br/>
+            <label>密码</label><input type="password" name="password"/><br/>
+            <label>爱好</label>
+            <label>唱</label><input type="checkbox" name="hobby" value="sing"/>
+            <label>跳</label><input type="checkbox" name="hobby" value="jump"/>
+            <label>RAP</label></label><input type="checkbox" name="hobby" value="rap"/>
+            <label>打篮球</label><input type="checkbox" name="hobby" value="play basketball"/><br/>
+            <input type="submit" value="提交"/><br/>
+        </form>
+
+
+    </body>
+</html>
