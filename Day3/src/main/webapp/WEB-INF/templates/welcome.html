@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>Welcome</title>
+    </head>
+    <body>
+        <h1>WELCOME!</h1>
+        <a th:href="@{/heiheihei(username='Dage',password=123456)}">@RequestParam-->带参前往heiheihei</a><br/>
+        <a th:href="@{/hahaha(username='IU',age=30)}">@RequestHeader-->带参前往hahaha</a><br/>
+        <a th:href="@{/xixixi(username='JuJingyi',age=27)}">HttpServletRequest-->带参进入xixixi</a><br/>
+        <a th:href="@{/aha(username='LinZhiling',age=48)}">@CookieValue-->带参进入aha</a><br/>
+        <a th:href="@{/ahaa(username='JuJingyi')}">request.setAttribute-->带参进入ahaa</a><br/>
+        <a th:href="@{/abcd(wife='IU')}">ModelAndView-->带参进入abcd</a><br/>
+        <a th:href="@{/abcdef(wife='JuJingyi')}">Model-->带参进入abcdef</a><br/>
+        <form th:action="@{/hetui}" method="post">
+            <label>用户名</label><label>
+            <input type="text" name="name"/>
+        </label><br/>
+            <label>密码</label><label>
+            <input type="password" name="password"/>
+        </label><br/>
+            <label>性别</label><label>男</label><label>
+            <input type="radio" name="sex" value="male"/>
+        </label><label>女</label><label>
+            <input type="radio" name="sex" value="female"/>
+        </label><br/>
+            <label>年龄</label><label>
+            <input type="text" name="age"/>
+        </label>
+            <input type="submit" value="自动组装成bean 提交"/>
+        </form>
+
+    </body>
+</html>
