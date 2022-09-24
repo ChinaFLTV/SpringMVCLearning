@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>ScopeParametersTest</title>
+    </head>
+    <body>
+
+        <h1 style="color:blue">This is a page for testing scope parameters!</h1>
+        <h3 th:text="${wife}"></h3>
+        <h3 th:text="${husband}"></h3>
+        <h3 th:text="${session.wife2}" style="color:blue"></h3>
+        <h2 th:text="${application.wife}" style="color:purple"></h2>
+        <h2 th:text="${application.wife2}" style="color:blue"></h2>
+
+    </body>
+</html>

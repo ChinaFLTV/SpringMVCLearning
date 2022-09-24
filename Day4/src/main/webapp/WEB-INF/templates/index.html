@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>HomePage</title>
+    </head>
+    <body>
+
+        <h1>This is a homepage!</h1>
+        <a th:href="@{/heiheihei(username='Dage')}">Map-->带参进入heiheihei</a><br/>
+        <a th:href="@{/hahaha(username='JuJingyi')}">ModelMap-->带参进入hahaha</a><br/>
+        <a th:href="@{/xixixi(username='JuJingyi')}">HttpSession-->带参进入xixixi</a><br/>
+        <a th:href="@{/hehehe(username='Dage')}">HttpSession-->ServletContext-->带参进入hehehe</a><br/>
+        <a th:href="@{/aha(username='Dage')}">forward:-->带参进入aha-->hehehe</a><br/>
+        <a th:href="@{/ati(username='JuJingyi')}">redirect-->带参进入ati-->hehehe</a><br/>
+        <a th:href="@{/hetui(username='IU')}">mvc:view-controller-->带参进入success</a><br/>
+        <a th:href="@{/aihei(username='JuJingyi')}">JSP-->带参进入aihei</a><br/>
+
+    </body>
+</html>
