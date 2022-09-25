@@ -12,6 +12,7 @@
         <module>Day2</module>
         <module>Day3</module>
         <module>Day4</module>
+        <module>Day5</module>
     </modules>
     <packaging>pom</packaging>
 

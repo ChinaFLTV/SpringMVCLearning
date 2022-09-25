@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>Day5</title>
+    </head>
+    <body>
+
+        <h1>This is a DAY5 page!</h1>
+        <a th:href="@{/user}">Select all users ' information</a>
+        <a th:href="@{/user/666}">Select a user ' information by id = 666</a>
+        <form th:action="@{/user}" method="post">
+            <label>Username</label><label>
+            <input type="text" name="username">
+        </label><br/>
+            <label>Password</label><label>
+            <input type="password" name="password">
+        </label><br/>
+            <input type="submit" value="new User"/><br/>
+        </form>
+
+        <a th:href="@{/employee}">select * from employees</a>
+
+    </body>
+</html>
