@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>Modify</title>
+    </head>
+    <body>
+        <form th:action="@{/xixi}" method="post">
+            <label>Username</label><label>
+            <input type="text" name="username" th:value="${target.username}">
+        </label><br/>
+            <label>Password</label><label>
+            <input type="password" name="password" th:value="${target.password}">
+        </label><br/>
+            <label>id</label><label>
+            <input type="text" name="id" th:value="${target.id}"/>
+        </label><br/>
+            <input type="submit" value="MODIFY"/><br/>
+        </form>
+    </body>
+</html>

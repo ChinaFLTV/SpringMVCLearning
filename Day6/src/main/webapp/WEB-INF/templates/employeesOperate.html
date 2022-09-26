@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>EmployeeOperate</title>
+        <script  src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
+        <script defer type="text/javascript" th:src="@{/static/js/day6.js}"></script>
+
+    </head>
+    <body>
+
+        <h1 style="color:blue">This is the data show of employees!</h1>
+        <!--suppress HtmlDeprecatedAttribute -->
+        <table id="dataTable" border="2" cellspacing="2">
+            <tr>
+                <th colspan="4">Employees Information</th>
+            </tr>
+            <tr>
+                <th>ID</th>
+                <th>username</th>
+                <th>password</th>
+                <th>operations  <a th:href="@{/add}">ADD</a></th>
+            </tr>
+            <tr th:each="employee:${employees}">
+                <td th:text="${employee.id}"/>
+                <td th:text="${employee.username}"/>
+                <td th:text="${employee.password}"/>
+                <td>
+                    <a @click="deleteEmployee" th:href="@{/employees/} +${employee.id}">DELETE</a>
+                    <a th:href="@{/modify/}+${employee.id}">MODIFY</a>
+                </td>
+
+            </tr>
+
+        </table>
+
+        <form id="deleteForm" method="post">
+            <input type="hidden" name="_method" value="delete"/>
+        </form>
+        <script type="text/javascript">
+
+            var vue = new Vue({
+
+                el: "#dataTable",
+                methods: {
+
+                    deleteEmployee: function (event) {
+
+                        var deleteForm = document.getElementById("deleteForm");
+                        deleteForm.action = event.target.href;
+                        deleteForm.submit();
+                        event.preventDefault();
+
+                    }
+
+                }
+
+            });
+
+        </script>
+    </body>
+</html>
