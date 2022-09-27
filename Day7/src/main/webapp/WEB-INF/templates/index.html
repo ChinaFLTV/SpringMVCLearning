@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <title>Day7</title>
+        <!-- 生产环境版本，优化了尺寸和速度 -->
+        <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script defer type="text/javascript" th:src="@{/static/js/Day7.js}"></script>
+
+    </head>
+
+    <body>
+
+        <h1>This is the page for DAY7</h1>
+        <a th:href="@{/heiheihei(wife='JuJingyi')}">@ResponseBody-->带参进入heiheihei</a><br/>
+        <a @click="axios" id="app" th:href="@{/hehehe}">axios-->带参进入hehehe</a><br/>
+        <a th:href="@{/hahaha(username='Dage')}">ResponseEntity-->带参进入鞠婧祎下载界面hahaha</a><br/>
+        <form th:action="@{/xixixi}" method="post" enctype="multipart/form-data">
+            <label>Your girlfriend profile</label><input type="file" name="profile"><br/>
+            <input type="submit" value="Upload Profile"><br/>
+        </form>
+
+    </body>
+
+</html>
